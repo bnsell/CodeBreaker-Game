@@ -7,16 +7,16 @@ public class CodeBreaker{
 		Random rand = new Random();
 		boolean winning = false;
 		int maxTries = 12;
-		int numR = 9;
+		int numRange = 9;
 		String input = "";
 		int countx = 0;
 		int counto = 0;
 		
 		//FOUR random numbers range from 1-5.
-		int n1 = rand.nextInt(numR)+1;
-		int n2 = rand.nextInt(numR)+1;
-		int n3 = rand.nextInt(numR)+1;
-		int n4 = rand.nextInt(numR)+1;
+		int n1 = rand.nextInt(numRange)+1;
+		int n2 = rand.nextInt(numRange)+1;
+		int n3 = rand.nextInt(numRange)+1;
+		int n4 = rand.nextInt(numRange)+1;
 		int[] master = {n1,n2,n3,n4};
 		boolean x1=false,x2=false,x3=false,x4=false;
 		
