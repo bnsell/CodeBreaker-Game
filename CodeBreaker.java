@@ -20,7 +20,7 @@ public class CodeBreaker{
 		int[] master = {n1,n2,n3,n4};
 		boolean x1=false,x2=false,x3=false,x4=false;
 		
-		System.out.println("Welcome to CodeBreaker!\n\nEnter the 4-digit code now:");
+		System.out.println("\nWelcome to CodeBreaker!!\n\nEnter the 4-digit code now:\n");
 		for(int i=0;i<maxTries;i++){
 			//Keep asking until input length is 4.
 			input = "";
@@ -59,7 +59,7 @@ public class CodeBreaker{
 			
 			//Winning Condition.
 			if(countx==4){winning=true;score=i+1;}
-			if(winning){WinningAnimation();}
+			if(winning){WinningAnimation(master);}
 			
 			for(int x=0;x<countx;x++){
 				System.out.print("+");
@@ -67,18 +67,26 @@ public class CodeBreaker{
 			for(int o=0;o<counto;o++){
 				System.out.print("-");
 			}
+			int hintlen = countx+counto;
+			for(int j=0;j<6-hintlen;j++){
+				System.out.print(" ");
+			}
+			if(i!=maxTries-2){System.out.println((maxTries-i-1)+" tries left.");}
+			else{System.out.println("Last try!");}
 			countx=0; counto=0;
-			if(i!=maxTries-2){System.out.println(" "+(maxTries-i-1)+" tries left.");}
-			else{System.out.println(" last try!");}
 		}
 		
 		System.out.println("You lose. The code was "+n1+" "+n2+" "+n3+" "+n4);
 		sc.nextLine();
 		System.exit(0);
 	}
-	public static void WinningAnimation(){
-		if(score==1){System.out.println("WOW what?! You cracked the code in "+score+" try!!!");}
-		else{System.out.println("Congratulations! You cracked the code in "+score+" tries!!!");}
+	public static void WinningAnimation(int[] arr){
+		if(score==1){System.out.println("WOW lucky! You cracked the code on your first try!!!");}
+		else{
+			System.out.println("\nCongratulations!\n");
+			System.out.println(arr[0]+" "+arr[1]+" "+arr[2]+" "+arr[3]);
+			System.out.println("\nYou cracked the code in "+score+" tries!!!");
+		}
 		System.exit(0);
 	}
 
