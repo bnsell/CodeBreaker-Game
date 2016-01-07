@@ -1,4 +1,4 @@
-# CodeBreakerGame
+# CodeBreaker
 
 You must crack the 4-digit passcode to beat the game. You will be given hints based on the accuracy of your attempts.
 
