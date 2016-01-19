@@ -12,7 +12,7 @@ public class CodeBreaker{
 		int countx = 0;
 		int counto = 0;
 		
-		//FOUR random numbers range from 1-5.
+		//FOUR random numbers range from 1-numRange.
 		int n1 = rand.nextInt(numRange)+1;
 		int n2 = rand.nextInt(numRange)+1;
 		int n3 = rand.nextInt(numRange)+1;
@@ -39,6 +39,7 @@ public class CodeBreaker{
 			}
 			
 			//Count up your X's and O's.
+			//This code needs to be modified to follow original game rules.
 			if(guesses[0]==n1){countx++;x1=true;}
 			if(guesses[1]==n2){countx++;x2=true;}
 			if(guesses[2]==n3){countx++;x3=true;}
